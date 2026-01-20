@@ -1,4 +1,10 @@
-Flask==3.0.0
+fastapi
+uvicorn
+jinja2
 scikit-learn
 numpy
 pandas
+matplotlib
+seaborn
+joblib
+python-multipart
