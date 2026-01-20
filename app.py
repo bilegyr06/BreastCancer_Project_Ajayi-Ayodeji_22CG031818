@@ -12,12 +12,12 @@ app = FastAPI(title="Cancer Prediction App")
 templates = Jinja2Templates(directory="templates")
 
 # Load the trained model
-model_filename = "cancermodel.pkl"
+model_filename = "./model/breast_cancer_model.pkl"
 
 if os.path.exists(model_filename):
     model = joblib.load(model_filename)
 else:
-    print(f"Error: '{model_filename}' not found. Please run 'python cancermodel.py' first.")
+    print(f"Error: '{model_filename}' not found. Please run 'python breast_cancer_model.py' first.")
     model = None
 
 @app.get("", include_in_schema=False) 
