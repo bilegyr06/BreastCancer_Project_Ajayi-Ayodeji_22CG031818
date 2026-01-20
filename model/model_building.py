@@ -72,7 +72,7 @@ print(classification_report(y_test, y_test_pred, target_names=['Malignant', 'Ben
 print("\n" + "="*50)
 print("SAVING PIPELINE")
 print("="*50)
-joblib.dump(pipeline, "breast_cancer_model.pkl")
+joblib.dump(pipeline, "./model/breast_cancer_model.pkl")
 print("✓ Pipeline saved as 'breast_cancer_model.pkl'")
 
 # 9. Demonstrate pipeline reloading and prediction
@@ -81,7 +81,7 @@ print("DEMONSTRATING PIPELINE RELOADING AND PREDICTION")
 print("="*50)
 
 # Reload pipeline
-loaded_pipeline = joblib.load("breast_cancer_model.pkl")
+loaded_pipeline = joblib.load("./model/breast_cancer_model.pkl")
 print("✓ Pipeline reloaded successfully")
 
 # Make predictions on test set using reloaded pipeline
