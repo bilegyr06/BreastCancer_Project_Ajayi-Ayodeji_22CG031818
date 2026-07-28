@@ -63,4 +63,4 @@ async def predict(request: Request,
             {"request": request, "prediction_text": f"Error: {str(e)}"}
         )
 
-# Run with: uvicorn main:app --reload
+# Run with: uvicorn app:app --reload
